@@ -6,6 +6,7 @@ sequenceDiagram
   browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
   activate server
   server-->>browser: 302 response
+  deactivate server
 
   Note right of browser: The 302 is a redirect to perform a GET at /exampleapp/notes.
   Note right of browser: The text entered in the form was sent in the POST request.
